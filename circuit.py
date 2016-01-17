@@ -11,9 +11,8 @@ def main():
         print_info(jsonrequest)
 
 def get_request(circuit):
-        w3tw2aPola3KxTr92a3nby3zq92380 = "api-key"
         url = 'https://api.com/circuit={}'.format(circuit)
-        headers = ({'Authorization':'tok:' + w3tw2aPola3KxTr92a3nby3zq92380, 'Accept':'application/json'})
+        headers = ({'Authorization':'tok:' + "api-key", 'Accept':'application/json'})
         r = urllib2.Request(url, None, headers)
         h = urllib2.urlopen(r)
         uberinfo =  json.loads(h.read())
