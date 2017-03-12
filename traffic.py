@@ -11,9 +11,9 @@ parser.add_argument("-p", "--platform", default="cache", help="enter the platfor
 args = parser.parse_args()
 
 if args.platform=="cache":
-        url = "http://grids.vdms.net:9000/cache-report?pop=" + args.pop + "&groups=bw"
+        url = "http://grids.com:9000/cache-report?pop=" + args.pop + "&groups=bw"
 else:
-        url = "http://grids.vmds.net:9000/" + args.platform + "-report?pop=" + args.pop + "&groups=bw"
+        url = "http://grids.com:9000/" + args.platform + "-report?pop=" + args.pop + "&groups=bw"
 
 r = requests.get(url)
 soup = BeautifulSoup(r.content)
